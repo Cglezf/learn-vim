@@ -155,6 +155,23 @@ function M.check_current_exercise()
         local regex = vim.regex(pattern)
         is_correct = (regex:match_str(current_buffer_content) ~= nil) -- match_str returns nil if no match
 
+    -- The last line that starts with the snippet has at least min_length_after_snippet
+    -- non-blank characters after it, on that line or below (a linewise paste lands on
+    -- the next line). Only lines that start with it count: the instruction header may quote it.
+    elseif validation.type == 'check_buffer_content_contains' then
+        local snippet = validation.target_content_snippet
+        local lines = vim.api.nvim_buf_get_lines(exercise_bufnr, 0, -1, false)
+        local found
+        for i, line in ipairs(lines) do
+            if line:sub(1, #snippet) == snippet then found = i end
+        end
+        if found then
+            local rest = { lines[found]:sub(#snippet + 1) }
+            vim.list_extend(rest, lines, found + 1)
+            local after = table.concat(rest):gsub('%s', '')
+            is_correct = #after >= (validation.min_length_after_snippet or 1)
+        end
+
     elseif validation.type == 'check_cursor_position' then
         local current_cursor = vim.api.nvim_win_get_cursor(exercise_winid)
          -- Adjusting for row being 1-indexed, and column being 0-indexed
