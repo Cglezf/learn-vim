@@ -25,7 +25,7 @@ Let's practice repeating actions. Use `:LearnVim exc` to check and `:LearnVim ex
                 instruction = "Delete the word 'delete' on the first line using `dw`. Then move to the next two lines and use the `.` command to delete the words 'delete' on those lines. Type `:LearnVim exc` to check.",
                 type = "insert_text",
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module5_lesson1_exercise1_setup.txt"),
-                start_cursor = {5, 7}, -- Cursor on 'd' of 'delete' on the first line
+                start_cursor = {6, 7}, -- Cursor on 'd' of 'delete' on the first line
                 validation = {
                     type = 'check_buffer_content',
                     target_content = Utils.read_file_content("lua/learn_vim/exercise_content/module5_lesson1_exercise1_target.txt")
@@ -36,7 +36,7 @@ Let's practice repeating actions. Use `:LearnVim exc` to check and `:LearnVim ex
                 instruction = "Change the word 'CHANGE' to 'EDIT' on the first line using `cw`. Then move to the next two lines and use the `.` command to repeat the change. Press `<Esc>` after each change. Type `:LearnVim exc` to check.",
                 type = "insert_text",
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module5_lesson1_exercise2_setup.txt"),
-                start_cursor = {5, 7}, -- Cursor on 'C' of 'CHANGE' on the first line
+                start_cursor = {6, 7}, -- Cursor on 'C' of 'CHANGE' on the first line
                 validation = {
                     type = 'check_buffer_content',
                     target_content = Utils.read_file_content("lua/learn_vim/exercise_content/module5_lesson1_exercise2_target.txt")

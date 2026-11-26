@@ -87,7 +87,7 @@ Let's practice typing something *before* existing text. Remember to press `<Esc>
                 instruction = "Press `i` to enter Insert mode. Type 'INSERTED ' before 'TARGET', then press `<Esc>`. Type `:LearnVim exc` to check.", -- Updated instruction
                 type = "insert_text", -- Indicates this exercise is about inserting text
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module1_lesson3_exercise1_setup.txt"),
-                start_cursor = {5, 20}, -- Position cursor on 'T' of TARGET (line 5, column 20 - 0-based)
+                start_cursor = {6, 19}, -- Position cursor on 'T' of TARGET (line 6, column 19 - 0-based)
                 validation = {
                      type = 'check_buffer_content', -- Validation rule: check the entire buffer content
                      target_content = Utils.read_file_content("lua/learn_vim/exercise_content/module1_lesson3_exercise1_target.txt")
