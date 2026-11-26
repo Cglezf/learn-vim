@@ -5,4 +5,4 @@
 local count = 0
 if count == 0 then
 end
-print("Done")]
+print("Done")

@@ -222,7 +222,7 @@ Let's perform a sequence of actions that uses buffers, windows, and tabs togethe
                 instruction = "Yank the line 'YANK THIS LINE' using `yy`. Then type `:tabnew` to open a new tab. In the new tab, type `p` to paste the line. Then type `:tabclose` to close the new tab and return here. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content (should be unchanged)
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module12_lesson6_exercise1_setup.txt"),
-                start_cursor = {5, 0}, -- Cursor on "YANK THIS LINE"
+                start_cursor = {6, 0}, -- Cursor on "YANK THIS LINE"
                 validation = {
                     type = 'check_buffer_content',
                     target_content = Utils.read_file_content("lua/learn_vim/exercise_content/module12_lesson6_exercise1_target.txt")
@@ -233,7 +233,7 @@ Let's perform a sequence of actions that uses buffers, windows, and tabs togethe
                 instruction = "Yank the line 'YANK THIS LINE' using `yy`. Then type `:split` to open a new window. In the new window, type `:bnext` to switch to the tutorial text buffer. Type `:LearnVim exc` to check.",
                 type = "mode_switch", -- Check mode
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module12_lesson6_exercise2_setup.txt"),
-                start_cursor = {5, 0}, -- Cursor on "YANK THIS LINE"
+                start_cursor = {6, 0}, -- Cursor on "YANK THIS LINE"
                 validation = { type = 'check_mode', target_mode = 'n' }, -- Basic validation
                 feedback = "You combined yanking, splitting, and buffer navigation!",
                  -- TODO: Add validation to check which buffer is displayed in the active window.

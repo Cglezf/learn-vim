@@ -149,7 +149,7 @@ More exercises to solidify your skills.
 ]],
         exercises = {
             {
-                instruction = "In this Elixir snippet, use Line Visual (`V`) to select the three lines defining the function body and delete them (`d`). Type `:LearnVim exc` to check.",
+                instruction = "In this Elixir snippet, use Line Visual (`V`) to select the two lines defining the function body and delete them (`d`). Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module11_lesson4_exercise1_setup.txt"),
                 start_cursor = {6, 2}, -- Cursor on 'm' of message
@@ -494,7 +494,7 @@ Use `:LearnVim exc` to check when you're done!
                 instruction = "Insert text to complete the sentence: 'You have successfully completed the LearnVim tutorial!'. Place your cursor after 'You have successfully completed the ' and insert 'LearnVim tutorial!'. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module11_lesson14_exercise1_setup.txt"),
-                start_cursor = {5, 35}, -- Cursor after "the "
+                start_cursor = {6, 35}, -- Cursor after "the "
                 validation = {
                     type = 'check_buffer_content',
                     target_content = Utils.read_file_content("lua/learn_vim/exercise_content/module11_lesson14_exercise1_target.txt")
@@ -505,7 +505,7 @@ Use `:LearnVim exc` to check when you're done!
                 instruction = "Replace the placeholder text `[Your Name]` with your name and `[Your Effort]` with a word describing your effort (e.g., 'great', 'hard'). Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module11_lesson14_exercise2_setup.txt"),
-                start_cursor = {5, 17}, -- Cursor on '[' of [Your Name]
+                start_cursor = {6, 17}, -- Cursor on '[' of [Your Name]
                 validation = {
                     type = 'check_buffer_content_regex', -- Need regex validation
                     target_content_pattern = Utils.read_file_content("lua/learn_vim/exercise_content/module11_lesson14_exercise2_target.txt")

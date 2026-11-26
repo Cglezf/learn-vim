@@ -6,4 +6,4 @@ struct Person {
     var name: String
     var age: Int
 }
-let person = Person(name: "Alice", age: 30)]
+let person = Person(name: "Alice", age: 30)

@@ -4,5 +4,5 @@
 " ---------------------------------------------
 "First message"
 "Second message"
-puts "Third message"
+"Third message"
 # This line is different

@@ -4,4 +4,4 @@
 " ---------------------------------------------
 struct Person {
 }
-let person = Person(name: "Alice", age: 30)]
+let person = Person(name: "Alice", age: 30)

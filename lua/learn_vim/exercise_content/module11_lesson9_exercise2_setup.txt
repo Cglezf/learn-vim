@@ -9,4 +9,4 @@ object Main {
     val city = "Paris"
     println(s"$name is $age in $city")
   }
-}]
+}

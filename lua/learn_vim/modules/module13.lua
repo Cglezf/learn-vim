@@ -74,7 +74,7 @@ Let's practice with sentences and paragraphs. Remember to use `:LearnVim exc` to
                 instruction = "In this text snippet, place your cursor anywhere on the first sentence and use `cis` to change the inner sentence. Type 'This is the new first sentence.' and press `<Esc>`. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module13_lesson2_exercise1_setup.txt"),
-                start_cursor = {5, 10}, -- Cursor on 'h' of 'the'
+                start_cursor = {6, 10}, -- Cursor on 'h' of 'the'
                 validation = {
                     type = 'check_buffer_content',
                     target_content = Utils.read_file_content("lua/learn_vim/exercise_content/module13_lesson2_exercise1_target.txt")
@@ -85,7 +85,7 @@ Let's practice with sentences and paragraphs. Remember to use `:LearnVim exc` to
                 instruction = "In this text snippet, place your cursor anywhere on the first paragraph and use `dap` to delete around the paragraph. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module13_lesson2_exercise2_setup.txt"),
-                start_cursor = {5, 5}, -- Cursor on 's' of 'This'
+                start_cursor = {6, 5}, -- Cursor on 's' of 'This'
                 validation = {
                     type = 'check_buffer_content',
                     target_content = Utils.read_file_content("lua/learn_vim/exercise_content/module13_lesson2_exercise2_target.txt")
@@ -134,7 +134,7 @@ Let's practice with delimiter text objects in different languages. Remember to u
                 instruction = "In this Go snippet, place your cursor anywhere inside the curly braces `{}` of the slice literal and use `da{` to delete around the curly braces. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module13_lesson3_exercise2_setup.txt"),
-                start_cursor = {7, 22}, -- Cursor on '2'
+                start_cursor = {8, 22}, -- Cursor on '2'
                 validation = {
                     type = 'check_buffer_content',
                     target_content = Utils.read_file_content("lua/learn_vim/exercise_content/module13_lesson3_exercise2_target.txt")
@@ -142,7 +142,7 @@ Let's practice with delimiter text objects in different languages. Remember to u
                 feedback = "You deleted around curly braces!",
             },
              {
-                instruction = "In this Python snippet, place your cursor anywhere inside the single quotes `''` and use `ya'` to yank the inner single quotes. Then move to the line below and paste using `p`. Type `:LearnVim exc` to check.",
+                instruction = "In this Python snippet, place your cursor anywhere inside the single quotes `''` and use `yi'` to yank the inner single quotes. Then move to the line below and paste using `p`. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module13_lesson3_exercise3_setup.txt"),
                 start_cursor = {5, 16}, -- Cursor on 't' of 'this'
@@ -190,7 +190,7 @@ Let's practice combining operators and Visual mode with text objects. Remember t
                 feedback = "You changed text inside parentheses!",
             },
              {
-                instruction = [["In this Ruby snippet, place your cursor anywhere inside the double quotes `""` and use yi`"` to yank the inner double quotes. Then move to the line below and paste using `p`. Type `:LearnVim exc` to check."]],
+                instruction = [[In this Ruby snippet, place your cursor anywhere inside the double quotes `""` and use `yi"` to yank the inner double quotes. Then move to the line below and paste using `p`. Type `:LearnVim exc` to check.]],
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module13_lesson4_exercise3_setup.txt"),
                 start_cursor = {5, 10}, -- Cursor inside the double quotes

@@ -8,4 +8,4 @@ function calculate(a, b) {
     } else {
         return b - a;
     }
-}]
+}

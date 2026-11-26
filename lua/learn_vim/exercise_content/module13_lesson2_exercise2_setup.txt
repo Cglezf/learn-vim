@@ -2,6 +2,7 @@
 " Instruction: In this text snippet, place your cursor anywhere on the first paragraph and use `dap` to delete around the paragraph. Type `:LearnVim exc` to check.
 " Use `:LearnVim exc` to check, `:LearnVim exr` to reset.
 " ---------------------------------------------
+
 This is the first paragraph.
 It has multiple lines.
 

@@ -9,4 +9,4 @@ object Main {
     val city = "Paris"
     printf(s"$name is $age in $city")
   }
-}]
+}

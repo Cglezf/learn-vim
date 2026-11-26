@@ -6,5 +6,5 @@
 name = "Alice";
 age = 30;
 city = "London";
-$isActive = true;
+isActive = true;
 ?>

@@ -4,6 +4,8 @@
 " ---------------------------------------------
        IDENTIFICATION DIVISION.
        PROGRAM-ID. HELLOWORLD.
+       PROCEDURE DIVISION.
            DISPLAY 'Hello, World!'.
            STOP RUN.
-       PROCEDURE DIVISION.
+           DISPLAY 'Hello, World!'.
+           STOP RUN.

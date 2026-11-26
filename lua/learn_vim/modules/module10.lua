@@ -67,7 +67,7 @@ Let's play back the macro you recorded in the previous lesson (register `a`) to 
                 instruction = "Record a macro into register `b` that deletes the current line (`dd`). Start with `qb`, type `dd`, stop with `q`. Then play it back twice using `2@b` to delete the next two lines. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson2_exercise2_setup.txt"),
-                start_cursor = {5, 0}, -- Cursor on "Delete this line 1."
+                start_cursor = {6, 0}, -- Cursor on "Delete this line 1."
                 validation = {
                     type = 'check_buffer_content',
                     target_content = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson2_exercise2_target.txt")
@@ -100,10 +100,10 @@ Remember to use `:LearnVim exc` to check and `:LearnVim exr` to reset.
                 feedback = "You used a macro to delete and move!",
             },
              {
-                instruction = "In this HTML snippet, record a macro into register `d` that deletes the opening `<li>` tag and moves to the start of the next line. Keystrokes: `qd` `/<li><Enter>` `dw` `j` `0` `q`. Then play the macro 3 times using `3@d` to delete the next three `<li>` tags. Type `:LearnVim exc` to check.",
+                instruction = "In this HTML snippet, record a macro into register `d` that deletes the opening `<li>` tag and moves to the start of the next line. Keystrokes: `qd` `/<li><Enter>` `df>` `j` `0` `q`. Then play the macro 3 times using `3@d` to delete the next three `<li>` tags. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson3_exercise2_setup.txt"),
-                start_cursor = {6, 4}, -- Cursor on the first '<' of <li>
+                start_cursor = {6, 0}, -- Cursor on the first '<' of <li>
                 validation = {
                     type = 'check_buffer_content',
                     target_content = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson3_exercise2_target.txt")
@@ -111,7 +111,7 @@ Remember to use `:LearnVim exc` to check and `:LearnVim exr` to reset.
                 feedback = "You used a macro to delete HTML tags!",
             },
              {
-                instruction = "In this JavaScript snippet, record a macro into register `e` that changes the word 'let' to 'const' and moves to the next line. Keystrokes: `qe` `cw` `const<Esc>` `j` `0` `q`. Then play the macro 2 times using `2@e`. Type `:LearnVim exc` to check.",
+                instruction = "In this JavaScript snippet, record a macro into register `e` that changes the word 'let' to 'const' and moves to the next line. Keystrokes: `qe` `cw` `const<Esc>` `j` `^` `q`. Then play the macro 2 times using `2@e`. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson3_exercise3_setup.txt"),
                 start_cursor = {6, 4}, -- Cursor on 'l' of the first 'let'
@@ -145,7 +145,7 @@ Remember to use `:LearnVim exc` to check and `:LearnVim exr` to reset.
                 feedback = "You used a macro to remove types in Go!",
             },
              {
-                instruction = "In this Dart snippet, record a macro into register `g` that deletes the word 'final' and moves to the next line. Keystrokes: `qg` `dw` `j` `0` `q`. Then play the macro 3 times using `3@g`. Type `:LearnVim exc` to check.",
+                instruction = "In this Dart snippet, record a macro into register `g` that deletes the word 'final' and moves to the next line. Keystrokes: `qg` `dw` `j` `^` `q`. Then play the macro 2 times using `2@g`. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson4_exercise2_setup.txt"),
                 start_cursor = {6, 2}, -- Cursor on 'f' of the first 'final'
@@ -159,7 +159,7 @@ Remember to use `:LearnVim exc` to check and `:LearnVim exr` to reset.
                 instruction = "In this SQL snippet, record a macro into register `h` that changes the value 'true' to 'false' and moves to the next line. Keystrokes: `qh` `/true<Enter>` `cw` `false<Esc>` `j` `0` `q`. Then play the macro 2 times using `2@h`. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson4_exercise3_setup.txt"),
-                start_cursor = {5, 38}, -- Cursor on 't' of the first 'true'
+                start_cursor = {5, 0}, -- Cursor on 't' of the first 'true'
                 validation = {
                     type = 'check_buffer_content',
                     target_content = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson4_exercise3_target.txt")
@@ -179,7 +179,7 @@ Remember to use `:LearnVim exc` to check and `:LearnVim exr` to reset.
 ]],
         exercises = {
             {
-                instruction = "In this Java snippet, record a macro into register `i` that deletes the word 'public' and moves to the next line. Keystrokes: `qi` `dw` `j` `0` `q`. Then play the macro 2 times using `2@i`. Type `:LearnVim exc` to check.",
+                instruction = "In this Java snippet, record a macro into register `i` that deletes the word 'public' and moves to the next line. Keystrokes: `qi` `dw` `j` `^` `q`. Then play the macro 2 times using `2@i`. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson5_exercise1_setup.txt"),
                 start_cursor = {5, 0}, -- Cursor on 'p' of the first 'public'
@@ -190,7 +190,7 @@ Remember to use `:LearnVim exc` to check and `:LearnVim exr` to reset.
                 feedback = "You used a macro to remove 'public' in Java!",
             },
              {
-                instruction = "In this Rust snippet, record a macro into register `j` that deletes the word 'let' and moves to the next line. Keystrokes: `qj` `dw` `j` `0` `q`. Then play the macro 2 times using `2@j`. Type `:LearnVim exc` to check.",
+                instruction = "In this Rust snippet, record a macro into register `j` that deletes the word 'let' and moves to the next line. Keystrokes: `qj` `dw` `j` `^` `q`. Then play the macro 2 times using `2@j`. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson5_exercise2_setup.txt"),
                 start_cursor = {6, 4}, -- Cursor on 'l' of the first 'let'
@@ -201,7 +201,7 @@ Remember to use `:LearnVim exc` to check and `:LearnVim exr` to reset.
                 feedback = "You used a macro to remove 'let' in Rust!",
             },
              {
-                instruction = "In this Swift snippet, record a macro into register `k` that changes the word 'var' to 'let' and moves to the next line. Keystrokes: `qk` `cw` `let<Esc>` `j` `0` `q`. Then play the macro 2 times using `2@k`. Type `:LearnVim exc` to check.",
+                instruction = "In this Swift snippet, record a macro into register `k` that changes the word 'var' to 'let' and moves to the next line. Keystrokes: `qk` `cw` `let<Esc>` `j` `^` `q`. Then play the macro 2 times using `2@k`. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson5_exercise3_setup.txt"),
                 start_cursor = {6, 4}, -- Cursor on 'v' of the first 'var'
@@ -246,10 +246,10 @@ Remember to use `:LearnVim exc` to check and `:LearnVim exr` to reset.
                 feedback = "You used a macro to remove '$' in PHP!",
             },
              {
-                instruction = "In this C++ snippet, record a macro into register `n` that deletes the word 'std::' and moves to the next line. Keystrokes: `qn` `dw` `j` `0` `q`. Then play the macro 2 times using `2@n`. Type `:LearnVim exc` to check.",
+                instruction = "In this C++ snippet, record a macro into register `n` that deletes the word 'std::' and moves to the next line. Keystrokes: `qn` `2dw` `j` `^` `q`. Then play the macro 2 times using `2@n`. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson6_exercise3_setup.txt"),
-                start_cursor = {6, 4}, -- Cursor on 's' of the first 'std::'
+                start_cursor = {8, 4}, -- Cursor on 's' of the first 'std::'
                 validation = {
                     type = 'check_buffer_content',
                     target_content = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson6_exercise3_target.txt")
@@ -269,7 +269,7 @@ Remember to use `:LearnVim exc` to check and `:LearnVim exr` to reset.
 ]],
         exercises = {
              {
-                instruction = "In this C# snippet, record a macro into register `o` that deletes the word 'public' and moves to the next line. Keystrokes: `qo` `dw` `j` `0` `q`. Then play the macro 2 times using `2@o`. Type `:LearnVim exc` to check.",
+                instruction = "In this C# snippet, record a macro into register `o` that deletes the word 'public' and moves to the next line. Keystrokes: `qo` `dw` `j` `^` `q`. Then play the macro 2 times using `2@o`. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson7_exercise1_setup.txt"),
                 start_cursor = {5, 0}, -- Cursor on 'p' of the first 'public'
@@ -280,7 +280,7 @@ Remember to use `:LearnVim exc` to check and `:LearnVim exr` to reset.
                 feedback = "You used a macro to remove 'public' in C#!",
             },
              {
-                instruction = "In this Kotlin snippet, record a macro into register `p` that changes the word 'val' to 'var' and moves to the next line. Keystrokes: `qp` `cw` `var<Esc>` `j` `0` `q`. Then play the macro 2 times using `2@p`. Type `:LearnVim exc` to check.",
+                instruction = "In this Kotlin snippet, record a macro into register `p` that changes the word 'val' to 'var' and moves to the next line. Keystrokes: `qp` `cw` `var<Esc>` `j` `^` `q`. Then play the macro 2 times using `2@p`. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson7_exercise2_setup.txt"),
                 start_cursor = {6, 4}, -- Cursor on 'v' of the first 'val'
@@ -314,7 +314,7 @@ Remember to use `:LearnVim exc` to check and `:LearnVim exr` to reset.
 ]],
         exercises = {
             {
-                instruction = "In this Racket snippet, record a macro into register `s` that deletes the word 'define' and moves to the next line. Keystrokes: `qs` `dw` `j` `0` `q`. Then play the macro 2 times using `2@s`. Type `:LearnVim exc` to check.",
+                instruction = "In this Racket snippet, record a macro into register `s` that deletes the word 'define' and moves to the next line. Keystrokes: `qs` `dw` `j` `q`. Then play the macro 2 times using `2@s`. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson8_exercise1_setup.txt"),
                 start_cursor = {5, 1}, -- Cursor on 'd' of the first 'define'
@@ -325,7 +325,7 @@ Remember to use `:LearnVim exc` to check and `:LearnVim exr` to reset.
                 feedback = "You used a macro to remove 'define' in Racket!",
             },
              {
-                instruction = "In this C# snippet, record a macro into register `t` that changes the word 'int' to 'double' and moves to the next line. Keystrokes: `qt` `cw` `double<Esc>` `j` `0` `q`. Then play the macro 2 times using `2@t`. Type `:LearnVim exc` to check.",
+                instruction = "In this C# snippet, record a macro into register `t` that changes the word 'int' to 'double' and moves to the next line. Keystrokes: `qt` `cw` `double<Esc>` `j` `^` `w` `q`. Then play the macro 2 times using `2@t`. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson8_exercise2_setup.txt"),
                 start_cursor = {6, 11}, -- Cursor on 'i' of the first 'int'
@@ -336,7 +336,7 @@ Remember to use `:LearnVim exc` to check and `:LearnVim exr` to reset.
                 feedback = "You used a macro to change 'int' to 'double' in C#!",
             },
              {
-                instruction = "In this Kotlin snippet, record a macro into register `u` that deletes the word 'println' and moves to the next line. Keystrokes: `qu` `dw` `j` `0` `q`. Then play the macro 2 times using `2@u`. Type `:LearnVim exc` to check.",
+                instruction = "In this Kotlin snippet, record a macro into register `u` that deletes the word 'println' and moves to the next line. Keystrokes: `qu` `dw` `j` `^` `q`. Then play the macro 2 times using `2@u`. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson8_exercise3_setup.txt"),
                 start_cursor = {6, 4}, -- Cursor on 'p' of the first 'println'
