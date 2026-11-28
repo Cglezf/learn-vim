@@ -103,7 +103,7 @@ Remember to use `:LearnVim exc` to check and `:LearnVim exr` to reset.
                 instruction = "In this HTML snippet, record a macro into register `d` that deletes the opening `<li>` tag and moves to the start of the next line. Keystrokes: `qd` `/<li><Enter>` `df>` `j` `0` `q`. Then play the macro 3 times using `3@d` to delete the next three `<li>` tags. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson3_exercise2_setup.txt"),
-                start_cursor = {6, 0}, -- Cursor on the first '<' of <li>
+                start_cursor = {6, 0}, -- Cursor at the start of the line, so the macro's search finds the first <li>
                 validation = {
                     type = 'check_buffer_content',
                     target_content = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson3_exercise2_target.txt")
@@ -159,7 +159,7 @@ Remember to use `:LearnVim exc` to check and `:LearnVim exr` to reset.
                 instruction = "In this SQL snippet, record a macro into register `h` that changes the value 'true' to 'false' and moves to the next line. Keystrokes: `qh` `/true<Enter>` `cw` `false<Esc>` `j` `0` `q`. Then play the macro 2 times using `2@h`. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson4_exercise3_setup.txt"),
-                start_cursor = {5, 0}, -- Cursor on 't' of the first 'true'
+                start_cursor = {5, 0}, -- Cursor at the start of the line, so the macro's search finds the first 'true'
                 validation = {
                     type = 'check_buffer_content',
                     target_content = Utils.read_file_content("lua/learn_vim/exercise_content/module10_lesson4_exercise3_target.txt")

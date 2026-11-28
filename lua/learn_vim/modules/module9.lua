@@ -263,7 +263,7 @@ Remember to use `:LearnVim exc` to check and `:LearnVim exr` to reset.
                 feedback = "You jumped to the matching parenthesis in Ruby!",
             },
              {
-                instruction = "In this PHP snippet, delete the '$' of the four variables in the function body (`$sum`, `$a`, `$b` and `$sum`); leave the parameters `($a, $b)` as they are. Only two '$' share a column (`$a` and the second `$sum`): delete those with Block Visual (`<C-v>`) first, then the other two with `x`. Type `:LearnVim exc` to check.",
+                instruction = "In this PHP snippet, use Block Visual (`<C-v>`) to delete the '$' character at the start of the variables in the function body. Type `:LearnVim exc` to check.",
                 type = "insert_text", -- Check buffer content
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module9_lesson5_exercise8_setup.txt"),
                 start_cursor = {7, 4}, -- Cursor on the '$' of $sum

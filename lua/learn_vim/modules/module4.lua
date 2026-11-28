@@ -169,7 +169,7 @@ Let's practice yanking and putting text. Use `:LearnVim exc` to check and `:Lear
 ]],
         exercises = {
             {
-                instruction = "Using `yw`, yank the word 'Copy'. Then move to the end of the line below and use `p` to paste it. `yw` also yanks the space after the word: delete that extra space at the end (for example with `x`). Type `:LearnVim exc` to check.",
+                instruction = "Using `yw`, yank the word 'Copy'. Then move to the end of the line below and use `p` to paste it. Type `:LearnVim exc` to check.",
                 type = "insert_text",
                 setup_text = Utils.read_file_content("lua/learn_vim/exercise_content/module4_lesson3_exercise1_setup.txt"),
                 start_cursor = {6, 0}, -- Cursor on 'C' of 'Copy'
